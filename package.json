@@ -1,0 +1,36 @@
+{
+  "name": "red-rings-legacy",
+  "version": "1.0.0",
+  "description": "Legacy (socket.io-emitter client via redis!) backend",
+  "main": "index.js",
+  "scripts": {
+    "prepublishOnly": "npm run build",
+    "build": "npm install --only=dev && rm package-lock.json && coffee -c *.coffee.md",
+    "pretest": "npm run build && coffee -c test/*.coffee.md",
+    "test": "mocha"
+  },
+  "author": "Stephane Alnet <stephane@shimaore.net>",
+  "license": "Unlicense",
+  "dependencies": {
+    "ioredis": "^3.2.2",
+    "most": "^1.7.3",
+    "notepack.io": "^2.1.2",
+    "red-rings": "^1.1.0"
+  },
+  "devDependencies": {
+    "coffeescript": "^2.2.1",
+    "mocha": "^5.0.1"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/shimaore/red-rings-legacy"
+  },
+  "keywords": [
+    "socket.io-emitter",
+    "redis",
+    "socket.io"
+  ]
+}
