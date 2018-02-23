@@ -12,7 +12,7 @@
             .from data._in
             .map (key) ->
               op: NOTIFY
-              key: key
+              key: "legacy-#{key}"
               value: data
 
       redis.psubscribe 'socket.io#/#'
