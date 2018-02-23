@@ -6,7 +6,7 @@
   "scripts": {
     "prepublishOnly": "npm run build",
     "build": "npm install --only=dev && rm package-lock.json && coffee -c *.coffee.md",
-    "pretest": "npm run build && coffee -c test/*.coffee.md",
+    "pretest": "npm install && npm run build && coffee -c test/*.coffee.md",
     "test": "mocha"
   },
   "author": "Stephane Alnet <stephane@shimaore.net>",
